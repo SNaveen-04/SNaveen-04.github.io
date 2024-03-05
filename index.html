@@ -44,10 +44,15 @@
             border-radius: 1px;
         }
     </style>
+    <script>
+        function submit(){
+            alert("Submitted");
+        }
+    </script>
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form method="post" onsubmit="submit">
         <div class="container login">Login</div>
         <div class="container">
             <label for="username">UserName</label>
