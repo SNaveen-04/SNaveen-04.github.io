@@ -3,70 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
-        body{
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-            align-items: center;
-            justify-content: center;
-            font-size: large;
-        }
-        form{
-            padding: 10px;
+        nav{
             background-color: antiquewhite;
+            color: chocolate;
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
         }
-        .container{
-            margin: 2px;
-            padding: 4px;
+        .navclass{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        main{
+            font-size: x-large;
+            height: 750px;
+            background-color: aliceblue;
             display: flex;
             flex-direction: column;
+            gap: 20px;
+            align-items: center;
             justify-content: center;
-            align-items: flex-start;
-            gap: 2;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .formclass{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
         }
         .button{
-            align-items: center;
+            justify-content: center;
         }
-        .login{
-            font-size: larger;
-            align-items: center;
+        h3{
+            font-size: x-large;
+            color: chocolate;
         }
         button{
-            padding: 4px;
-            background-color: rgb(26, 92, 233);
-            color: white;
-            border: 1px solid white;
-            border-radius: 1px;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: rgb(226, 171, 151);
         }
     </style>
-    <script>
-        function submit(){
-            alert("Submitted");
-        }
-    </script>
-    <title>Document</title>
 </head>
 <body>
-    <form method="post" onsubmit="submit">
-        <div class="container login">Login</div>
-        <div class="container">
-            <label for="username">UserName</label>
-            <input type="text" name="username" id="username">
+    <nav>
+        <div>            
+            <h1>
+                PERSONAL PAGE
+            </h1>
         </div>
-        <div class="container">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+        <div class="navclass">
+            <span>
+                About
+            </span>
+            <span>
+                Contact
+            </span>
         </div>
-        <div class="container button">
-            <button type="submit">
-                Submit
-            </button>
-        </div>
+    </nav>
+    <main>
+        <h3>
+            Contact Me
+        </h3>
+        <form>
+            <div class="formclass">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="formclass">
+                <label for="msg">Message</label>
+                <input type="text" name="msg" id="msg">
+            </div>
+            <div class="formclass button">
+                <button>
+                    Send
+                </button>
+            </div>
         </form>
+    </main>
 </body>
 </html>
